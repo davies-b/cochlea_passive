@@ -1,4 +1,4 @@
-# bubbles_multi/2D_finite
+# cochlea_passive
 
 `bubbles_multi/2D_finite` is a package implementing the multipole expansion method for Helmholtz scattering problems in two dimensions. Specifically, it handles scattering by a finite number of circular material inclusions.
 
