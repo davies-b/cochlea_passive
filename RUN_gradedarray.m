@@ -25,7 +25,7 @@ end
 
 
 % Material parameters
-% rho_b, kappa_b : cells
+% rho_b, kappa_b : resonators
 % rho0, kappa0 : background
 high=7000;
    
@@ -185,6 +185,7 @@ u = u/norm_u;
 uTotal = reshape(u, [gridN gridN]);
 hFig = figure(m+1);
 set(hFig, 'Position', [100 100 1200 900]);
-surf(g1, g2, real(uTotal), 'edgecolor', 'none'); xlabel('x_1'); ylabel('x_2'); title(['u_' num2str(m)])
+surf(g1, g2, real(uTotal), 'edgecolor', 'none'); 
+xlabel('x_1'); ylabel('x_2'); title(['u_' num2str(m)])
 axis([gridMinX1, gridMaxX1, gridMinX2, gridMaxX2, min(real(uTotal(:))), max(real(uTotal(:))) ]); rotate3d on;
 end

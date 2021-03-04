@@ -24,7 +24,7 @@ for i = 1:N
 end
 
 % Material parameters
-% rho_b, kappa_b : cells
+% rho_b, kappa_b : resonators
 % rho0, kappa0 : background
 high=7000;
    
@@ -309,25 +309,27 @@ ylabel('$\log_{10}\|u\|_X$','interpreter','latex')
 set(get(gca,'ylabel'),'rotation',0,'horizontalalignment','right')
 xlim([0 values_omeg(end)])
 box off
-set(gca,'TickLabelInterpreter','latex','xticklabel',[],'FontSize',10)
+set(gca,'TickLabelInterpreter','latex','xticklabel',[],'FontSize',11)
 
 for n = 1:N
     subplot(N+1,1,n+1)
     plot(values_omeg,abs(alpha_store(n,:)),'linewidth',1)
     xlim([0 values_omeg(end)])
     box off
-    set(gca,'TickLabelInterpreter','latex','FontSize',10)
+    set(gca,'TickLabelInterpreter','latex','FontSize',11)
     if n < N
         set(gca,'xticklabel',[])
     else
-        xlabel('$\omega_{in}$','interpreter','latex','FontSize',11)
+        xlabel('$\omega_{in}$','interpreter','latex','FontSize',15)
     end    
         
-    ylabel('$|\alpha_n(\Re\omega_n)|$','interpreter','latex')
+%     ylabel('$|\alpha_n(\Re\omega_n)|$','interpreter','latex')
+    ylabel(['$|\alpha_', num2str(n) ,'|$'],'interpreter','latex')
+
     
     set(get(gca,'ylabel'),'rotation',0,...
         'horizontalalignment','right',...
-        'FontSize',11)
+        'FontSize',15)
 end
 
 

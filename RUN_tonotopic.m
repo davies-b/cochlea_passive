@@ -26,7 +26,7 @@ end
 
 
 % Material parameters
-% rho_b, kappa_b : cells
+% rho_b, kappa_b : resonators
 % rho0, kappa0 : background
 high=7000;   
    
